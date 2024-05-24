@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PLACES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <div *ngFor="let place of places">
+      {{place.title}}
+    </div>
+  </ion-list>
+</ion-content>

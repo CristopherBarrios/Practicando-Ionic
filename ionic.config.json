@@ -1,0 +1,7 @@
+{
+  "name": "mifirst",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
