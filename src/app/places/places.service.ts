@@ -26,12 +26,8 @@ export class PlacesService {
     return [...this.places]
   }
 
-  getPlace(placeId: string) {
-    return {
-  ...this.places.find(place =>
-    { return place.id === placeId}
-  )
-}
+  getPlace(id: string): Place | undefined {
+    return this.places.find(place => place.id === id);
   }
 
   addPlace(title: string, imageURL: string) {
