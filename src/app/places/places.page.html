@@ -6,8 +6,13 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <div *ngFor="let place of places">
-      {{place.title}}
-    </div>
+    <ion-item *ngFor="let place of places">
+      <ion-avatar slot="start">
+        <ion-img [src]="place.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{place.title}}
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>
