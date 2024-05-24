@@ -25,4 +25,9 @@ export class PlaceDetailPage implements OnInit {
     })
   }
 
+  deletePlace(){
+    if (this.place && this.place.id) {
+      this.placesService.deletePlace(this.place.id);
+    }
+  }
 }
