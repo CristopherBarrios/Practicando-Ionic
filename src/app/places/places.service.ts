@@ -19,6 +19,13 @@ export class PlacesService {
       imageURL: 'https://farm4.staticflickr.com/3410/3293552040_c239798a1a_b.jpg',
       comments: ['bonito', 'se parece jaja']
     }
+    ,
+    {
+      id: '3',
+      title: 'jijijijijijij',
+      imageURL: 'https://farm4.staticflickr.com/3410/3293552040_c239798a1a_b.jpg',
+      comments: []
+    }
   ]
   constructor() { }
 

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/places"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{place?.title}}</ion-title>
+    <ion-title>{{ place?.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,16 +16,21 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <h1 class="ion-text-center">{{place?.title}}</h1>
+        <h1 class="ion-text-center">{{ place?.title }}</h1>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-list>
-          <ion-item *ngFor="let comment of place?.comments">
-            {{comment}}
+        <ion-list *ngIf="place && place.comments && place.comments.length > 0; else noComments">
+          <ion-item *ngFor="let comment of place.comments">
+            {{ comment }}
           </ion-item>
         </ion-list>
+        <ng-template #noComments>
+          <ion-text>
+            <p class="ion-text-center">No comments yet.</p>
+          </ion-text>
+        </ng-template>
       </ion-col>
     </ion-row>
   </ion-grid>
