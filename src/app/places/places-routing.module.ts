@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: PlacesPage
+  },  {
+    path: 'place-detail',
+    loadChildren: () => import('./place-detail/place-detail.module').then( m => m.PlaceDetailPageModule)
   }
+
 ];
 
 @NgModule({
