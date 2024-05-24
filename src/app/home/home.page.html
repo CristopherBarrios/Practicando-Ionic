@@ -7,5 +7,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Hola que tal soy Firo y se programar</h1>
+  <ion-list>
+    <ion-card *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl" >
+      <ion-card-content>
+        <p>{{photo.title}}</p>
+        <p>{{photo.albumId}}</p>: <a [href]="photo.url" target="_blank">{{photo.url}}</a>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>
